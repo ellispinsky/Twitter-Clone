@@ -1,6 +1,9 @@
 import { tweetsData } from './data.js'
 import { v4 as uuidv4 } from 'https://jspm.dev/uuid';
 
+localStorage.setItem('data', JSON.stringify(tweetsData))
+localStorage.getItem('data')
+
 document.addEventListener('click', function(e){
     if(e.target.dataset.like){
        handleLikeClick(e.target.dataset.like) 
